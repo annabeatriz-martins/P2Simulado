@@ -283,7 +283,19 @@ void exibirElementosArvore(NO* no, int qtEspacos)
 
 void exibirMaiorMenorElemento(NO* no)
 {
-	
+	//maior
+
+	if (no == NULL)
+	{
+		return;
+	}
+
+	while (no->dir != NULL) 
+	{
+		no = no->dir;
+	}
+
+	cout << no->valor << endl;
 }
 
 void buscarElementoArvore(NO* no, int valor)
